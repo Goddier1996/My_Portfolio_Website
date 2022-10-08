@@ -611,15 +611,14 @@ function changeLanguage() {
             "select": ": בחר שפה ",
 
             //start page
-            "titleName": " = = =",
-            "hi": "= =",
-            "info": "  = = = |==#=&= = = = = =",
+            "titleName": " אני  ",
+            "hi": "שלום לכולם",
+            "info": "  = = = |==== = = = = =",
             "text": ".= = = = = , = = = = = = === = = = =",
             "btn1": "קצת עליי",
 
             //about me text
             "titleAboutMe": ": קצת עליי",
-            // "name": "השם שלי ארטיום קוט",
             "aboutMe": "= = = = = = .  = = = = = = = = = = = = =.           = = = = = = = = = = = , = = = = = = = = = =  .  = = =/= .        = כ=ל = = = = = = = = === = = = =.         = = : (= ,== = = = , = , = = = = = =).",
             "aboutMeAge": "גיל : =",
             "aboutMeGender": "מין : =",
@@ -638,7 +637,7 @@ function changeLanguage() {
 
 
             //Experience text
-            "myExperience": ": -",
+            "myExperience": ": ניסיון",
             "titleMyExperience1": "= = =",
             "titleMyExperience2": "= = , =.=.=",
             "titleMyExperience3": "=-=",
