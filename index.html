@@ -12,27 +12,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <link rel="stylesheet" href="css/style.css">
-
-
-
-    <script src="sweetalert2.min.js"></script>
-    <link rel="stylesheet" href="sweetalert2.min.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-
-
-    <!-- here private date mail -->
     <script type="text/javascript">
         (function () {
-            emailjs.init("");
+            emailjs.init("privateData");
         })();
     </script>
-
-
 </head>
-
 
 
 <body>
@@ -47,28 +35,28 @@
     <!-- here hamburger menu for responsive for example phone -->
     <div id="menu-bars" class="fas fa-bars"></div>
 
-
-
     <!-- here menu -->
     <header>
 
-        <a href="/index.html" class="logo"> <span>happy</span> coding </a>
+        <a href="/index.html" class="logo">
+            < <span>hello </span>- world<span> /> </span>
+        </a>
 
         <nav class="navbar">
-            <a href="#home" class="homeMenu">home</a>
-            <a href="#about" class="homeAbout">about</a>
-            <a href="#skils" class="homeSkils">my skils</a>
-            <a href="#experience" class="homeExperience">experience</a>
-            <a href="#portfolio" class="homePortfolio">portfolio</a>
-            <a href="#contact" class="homeContact">contact</a>
+            <a href="#home" class="homeMenu">
+                home </a>
+            <a href="#about" class="homeAbout">
+                about </a>
+
+            <a href="#experience" class="homeExperience">
+                experience </a>
+            <a href="#portfolio" class="homePortfolio">
+                portfolio </a>
+            <a href="#contact" class="homeContact">
+                contact </a>
         </nav>
 
-
-
-
-
         <!-- here select language -->
-
         <div class="langWrap">
 
             <p class="select">select language :</p>
@@ -81,17 +69,19 @@
             <br />
         </div>
 
-
-
         <div class="follow">
-            <a href="" class="fab fa-facebook-f"></a>
-            <a href="" class="fab fa-github"></a>
-            <a href="" class="fab fa-linkedin"></a>
+            <a href="https://www.linkedin.com/in/artem-kot96" class="fab fa-linkedin"></a>
+            <a href="https://github.com/Goddier1996" class="fab fa-github"></a>
         </div>
 
     </header>
 
 
+
+    <!-- show Date time -->
+    <div class="showDimeDate">
+        <p class="highlight" id="dayMonthYear"></p>
+    </div>
 
 
 
@@ -99,14 +89,12 @@
     <section class="home" id="home">
 
         <div class="content">
-            <span class="hi"> hi there... </span>
-            <h3 class="name"> i am </h3>
-            <p class="info"> ------------------------------------------------------------------------- </p>
-            <p class="text"> <span class="highlight">---------------------------------------------
-                    ---------</span><br />------------------------------
-                ---
-                ---------------------------
-                ------------------------------------------------------------ </p>
+            <span class="hi"> ---------- </span>
+            <h3 class="name"> ------------- </h3>
+            <p class="info"> -------------------- <b class="highlight">----------
+                    ----------</b> </p>
+            <p class="text"> ---------------------------------------
+                <br /> ------------------------------ </p>
             <a href="#about" class="btn">about me</a>
         </div>
 
@@ -124,7 +112,10 @@
     <!-- about me info  -->
     <section class="about" id="about">
 
-        <h1 class="heading"> about me : </h1>
+        <div class="heading">
+            <img src="https://i.postimg.cc/P5BtK3Mw/t.png">
+        </div>
+
 
         <div class="row-1">
 
@@ -134,60 +125,101 @@
 
             <div class="content">
 
-
-                <p class="aboutMe">------------------------------------------------
-                    <br /> ----------------------------------------------------------------------------------------
-                    ------------------
-                    <br /> --------------------------------------------------------------------<span
-                        class="highlight">-------------------------
-                        -------------------------------------------------------</span>
-                    <br />------------------------------------------
-                    <br />-------------------------------------------------------------------------------------------
-                    --------
-                    -------------------------
-                    <br /> <span class="highlight">--------------------------------------------------------------------
-                        ------------
-                        -------------------------------------------</span>
+                <p class="aboutMe">----------------------------------------
+                    <br /> ---------------------------------------------------------------------------------------
+                    ----------
+                    <br /> ----------------------------------------,<b class="highlight">----------
+                        ----------
+                        -------------------</b>
+                    <br />----------------------------------
+                    <br />------------------------------------------------
+                    ----------
+                    ----------
+                    <br /> <b class="highlight">-----------------------------------------------------------------------
+                        ----------
+                        ------------------------------</b>
                 </p>
 
                 <div class="box-container">
 
                     <div class="box">
-                        <p> <span class="age"> age : -- </p>
-                        <p> <span class="gender"> gender : -- </p>
-                        <p> <span class="language"> language : ------------------------ </p>
-                        <p> <span class="country"> country : ------ </p>
-                        <p> <span class="immigrated"> ------------------------------------------ </p>
+                        <p> <span class="age"> age : ---------- </p>
+                        <p> <span class="gender"> gender : ---------- </p>
+                        <p> <span class="language"> language : ---------- </p>
+                        <p> <span class="country"> country : ---------- </p>
+                        <p> <span class="immigrated"> ---------- </p>
                     </div>
 
                 </div>
 
                 <a href="" class="btn CVen">Download CV(English)</a>
-                <a href="" class="btn CVhe">Download CV(עברית)</a>
+
+                <div class="headingSkils">
+                    <img src="https://i.postimg.cc/K8VYwvm4/r.png" height="10px">
+                </div>
+
 
             </div>
         </div>
-    </section>
 
+        <div class="Brands">
 
+            <div class="marquee">
 
+                <ul class="marquee-content">
+                    <li><img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg">
+                    </li>
+                    <li><img src="https://i.postimg.cc/y6GmtTxZ/react.png"></li>
+                    <li><img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
+                    </li>
+                    <li><img src="https://i.postimg.cc/7ZkdwbcT/pngegg.png"></li>
+                    <li><img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg">
+                    </li>
+                    <li><img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg">
+                    </li>
+                    <li><img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg">
+                    </li>
 
+                    <li><img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg">
+                    </li>
+                    <li><img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg">
+                    </li>
+                    <li><img
+                            src="https://i.postimg.cc/Cx1xYVF9/kisspng-microsoft-sql-server-computer-servers-database-5b266b13ba43a3-492433911529244435763.png">
+                    </li>
+                    <li><img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg">
+                    </li>
+                    <li><img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg">
+                    </li>
+                    <li><img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
+                    </li>
 
+                    <li><img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg">
+                    </li>
+                    <li><img src="https://cdn.worldvectorlogo.com/logos/adobe-xd.svg"></li>
 
+                    <li><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"></li>
+                    <li><img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg"></li>
+                    <li><img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg">
+                    </li>
 
-    <!-- my skils  -->
-    <section class="skils" id="skils">
-
-        <h1 class="heading mySkile"> my skills : </h1>
-
-        <div class="row-2">
-            <div id="box" class="box-container"></div>
+                </ul>
+            </div>
         </div>
 
     </section>
-
-
-
 
 
 
@@ -196,57 +228,97 @@
     <!-- my experience  -->
     <section class="experience" id="experience">
 
-        <h1 class="heading myExperience">my experience : </h1>
+        <div class="heading">
+            <img src="https://i.postimg.cc/0NFJY0zW/e.png">
+        </div>
 
         <div class="box-container">
 
             <div class="box">
                 <div class="content">
-                    <span> -------- - -------- </span>
-                    <h3 class="titleMyExperience1">---------------------</h3>
-                    <p class="aboutMyExperience1">------------------------------------------ </p>
+                    <span> ---------- ---------- - ---------- ---------- </span>
+                    <h3 class="titleMyExperience1">----------</h3>
+
+                    <div class="solderImg">
+                        <p class="aboutMyExperience1">---------- </p>
+                        <a href="">
+                            <img src="" height="90">
+                        </a>
+                    </div>
+
                 </div>
             </div>
 
 
-
             <div class="box">
                 <div class="content">
-                    <span> -------- - --------- </span>
-                    <h3 class="titleMyExperience3">------</h3>
+                    <span> ---------- ---------- - ---------- ---------- </span>
+                    <h3 class="titleMyExperience3">----------</h3>
 
                     <p class="aboutMyExperience3">
-                        ---------------------------------------------------------------------------------------------
+                        ---------- <b class="highlight">----------
+                            ----------</b>.
                         <br />
-                        ----------------------------------------------------------
-                    </p>
+                        ----------
 
+                        <div class="HighQImg">
+                            <a href="">
+                                <img src="" height="90">
+                            </a>
+                        </div>
+                    </p>
                 </div>
             </div>
-
 
 
             <div class="box">
                 <div class="content">
-                    <span> -------- - -------- </span>
-                    <h3 class="titleMyExperience2">---------------------------------</h3>
+                    <span> ---------- ---------- - ---------- ---------- </span>
+                    <h3 class="titleMyExperience2">----------</h3>
 
-                    <p class="aboutMyExperience2">--------------------------------------
-                        <br />--------------------------------------------------------------------------
-                        <br />------------------------------------------------------------------------------------------
-                        ----------------------------------------
+                    <p class="aboutMyExperience2"><b class="highlight">----------</b>.
+                        <br />----------
+                        <br />----------
+                        ----------
+                        ----------
                         <br />
-                        <p class="highlight">---------------------------------------------------</p>
+                        <b class="highlight">----------</b>.
 
+                        <div class="dipImg">
+                            <a href="">
+                                <img src="" height="99">
+                            </a>
+
+                            <a href="">
+                                <img src="" height="89">
+                            </a>
+                        </div>
                     </p>
-
                 </div>
             </div>
 
+
+            <div class="box">
+                <div class="content">
+                    <span> ---------- ---------- </span>
+                    <h3 class="titleMyExperience4">----------</h3>
+
+                    <p class="aboutMyExperience4">----------
+                        <br />----------
+                        <br /> <b class="highlight">----------
+                            ----------</b>.
+                    </p>
+
+
+                    <div class="dipImg">
+                        <a href="">
+                            <img src="" height="90">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
-
 
 
 
@@ -255,10 +327,13 @@
     <!-- my works portfolio  -->
     <section class="portfolio" id="portfolio">
 
-        <h1 class="heading myPortfolio"> my portfolio : </h1>
 
-        <p class="help"><span class="highlight">* Click on a picture.</span>
-            <br /><span class="highlight">chiose Open WebSite Project Or Github , Info.</span>
+        <div class="heading">
+            <img src="https://i.postimg.cc/vTXjjTFK/q.png">
+        </div>
+
+        <p class="help"><b class="highlight">* Click on a picture.</b>
+            <br /><b class="highlight">chiose Open WebSite Project Or Github , Info.</b>
         </p>
 
 
@@ -318,37 +393,34 @@
 
 
 
-
     <!-- contact  -->
-
     <section class="contact" id="contact">
 
-        <h1 class="heading myContact"> contact me : </h1>
-
+        <div class="heading">
+            <img src="https://i.postimg.cc/J79PrjKQ/w.png">
+        </div>
 
         <div class="icons-container">
 
             <div class="icons">
-                <i class="fas fa-envelope"></i>
+                <img src="https://i.postimg.cc/GmDBcCBt/2.png" height="60" alt="">
                 <h3 class="contactEmail">my email</h3>
-                <p>------------------</p>
+                <p>----------</p>
             </div>
 
             <div class="icons">
-                <i class="fas fa-phone"></i>
+                <img src="https://i.postimg.cc/5yZxGXS3/3.png" height="60" alt="">
                 <h3 class="contactPhone">my number</h3>
-                <p>--------------</p>
+                <p>----------</p>
             </div>
 
             <div class="icons">
-                <i class="fas fa-map-marker-alt"></i>
+                <img src="https://i.postimg.cc/Tw1f3Vk0/1.png" height="60" alt="">
                 <h3 class="contactAddress">my address</h3>
-                <p class="contactAddressWhere">------------------</p>
+                <p class="contactAddressWhere">---------- - ----------</p>
             </div>
 
         </div>
-
-
 
         <div class="row">
 
@@ -363,8 +435,7 @@
 
             </form>
 
-
-            <iframe class="map" src="" allowfullscreen="" loading="lazy">
+            <iframe class="map" src="https://www.google.com/maps" allowfullscreen="" loading="lazy">
             </iframe>
 
         </div>
@@ -378,7 +449,6 @@
 
     <!-- custom js file link  -->
     <script src="/app.js"></script>
-
 
 </body>
 

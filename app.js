@@ -34,7 +34,14 @@ CountProjectsAppArtuino();
 
 
 //show my skils from josn file
-ShowDataJsonMySkils();
+// ShowDataJsonMySkils();
+// ShowDataJsonMySkils2();
+// ShowDataJsonMySkils3();
+// ShowDataJsonMySkils4();
+// ShowDataJsonMySkils5();
+// ShowDataJsonMySkils6();
+autoShopCarusel();
+
 
 //taps protfolio
 TapsPortfolio();
@@ -42,20 +49,43 @@ TapsPortfolio();
 //seleact language
 changeLanguage();
 
+showDataDime();
 
 
 //pop up auto when load page
 function popup() {
 
-    Swal.fire({
-        background: 'none',
-        showConfirmButton: false,
-        timer: 6400,
-        html: '<img class="popUp" src="https://miro.medium.com/max/1360/1*IRGHmiGsa16stedQvIaZfw.gif"></img>'
-    })
+    // Swal.fire({
+    //     background: 'none',
+    //     showConfirmButton: false,
+    //     timer: 1000,
+    //     html: '<img class="popUp" src="https://miro.medium.com/max/1360/1*IRGHmiGsa16stedQvIaZfw.gif"></img>'
+    // })
 
 
 };
+
+
+function showDataDime() {
+
+    const data = new Date();
+    let showDate = `${data.getDay() + 1} / ${data.getMonth() + 1} / ${data.getFullYear()}`
+    document.querySelector("#dayMonthYear").innerHTML = showDate;
+}
+
+
+
+function autoShopCarusel() {
+    let root = document.documentElement; //לקחת מ css
+    let marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+    let marqueeContent = document.querySelector("ul.marquee-content");
+
+    root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+    for (let i = 0; i < marqueeElementsDisplayed; i++) {
+        marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+    }
+}
 
 
 
@@ -222,31 +252,166 @@ function ShowDataJsonMyWorksArtuino() {
 
 
 //show my skils from json file
-function ShowDataJsonMySkils() {
+// function ShowDataJsonMySkils() {
 
-    fetch("/json/skils.json")
+//     fetch("/json/skilsFront.json")
 
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (products) {
+//         .then(function (response) {
+//             return response.json();
+//         })
+//         .then(function (products) {
 
-            let placeholder = document.querySelector("#box");
-            let out = "";
+//             let placeholder = document.querySelector("#box");
+//             let out = "";
 
-            for (let product of products) {
-                out += `
+//             for (let product of products) {
+//                 out += `
+//                 <div class="box">
+//                     <img src="${product.image}"  width="auto" height="70">
+//                 </div>
+//           `;
+//             }
+
+//             placeholder.innerHTML = out;
+//         });
+// }
 
 
-                <div class="box">
-                    <img src="${product.image}"  width="auto" height="80">
-                </div>
-          `;
-            }
 
-            placeholder.innerHTML = out;
-        });
-}
+// function ShowDataJsonMySkils2() {
+
+//     fetch("/json/backend.json")
+
+//         .then(function (response) {
+//             return response.json();
+//         })
+//         .then(function (products) {
+
+//             let placeholder = document.querySelector("#box2");
+//             let out = "";
+
+//             for (let product of products) {
+//                 out += `
+
+
+//                 <div class="box">
+//                     <img src="${product.image}"  width="auto" height="70">
+//                 </div>
+//           `;
+//             }
+
+//             placeholder.innerHTML = out;
+//         });
+// }
+
+
+// function ShowDataJsonMySkils3() {
+
+//     fetch("/json/dataBase.json")
+
+//         .then(function (response) {
+//             return response.json();
+//         })
+//         .then(function (products) {
+
+//             let placeholder = document.querySelector("#box3");
+//             let out = "";
+
+//             for (let product of products) {
+//                 out += `
+
+
+//                 <div class="box">
+//                     <img src="${product.image}"  width="auto" height="70">
+//                 </div>
+//           `;
+//             }
+
+//             placeholder.innerHTML = out;
+//         });
+// }
+
+
+// function ShowDataJsonMySkils4() {
+
+//     fetch("/json/Algorithm .json")
+
+//         .then(function (response) {
+//             return response.json();
+//         })
+//         .then(function (products) {
+
+//             let placeholder = document.querySelector("#box4");
+//             let out = "";
+
+//             for (let product of products) {
+//                 out += `
+
+
+//                 <div class="box">
+//                     <img src="${product.image}"  width="auto" height="70">
+//                 </div>
+//           `;
+//             }
+
+//             placeholder.innerHTML = out;
+//         });
+// }
+
+
+// function ShowDataJsonMySkils5() {
+
+//     fetch("/json/adobe.json")
+
+//         .then(function (response) {
+//             return response.json();
+//         })
+//         .then(function (products) {
+
+//             let placeholder = document.querySelector("#box5");
+//             let out = "";
+
+//             for (let product of products) {
+//                 out += `
+
+
+//                 <div class="box">
+//                     <img src="${product.image}"  width="auto" height="70">
+//                 </div>
+//           `;
+//             }
+
+//             placeholder.innerHTML = out;
+//         });
+// }
+
+
+// function ShowDataJsonMySkils6() {
+
+//     fetch("/json/Other.json")
+
+//         .then(function (response) {
+//             return response.json();
+//         })
+//         .then(function (products) {
+
+//             let placeholder = document.querySelector("#box6");
+//             let out = "";
+
+//             for (let product of products) {
+//                 out += `
+
+
+//                 <div class="box">
+//                     <img src="${product.image}"  width="auto" height="70">
+//                 </div>
+//           `;
+//             }
+
+//             placeholder.innerHTML = out;
+//         });
+// }
+
 
 
 
@@ -265,7 +430,7 @@ function CountProjectsWeb() {
             let count = Object.keys(products).length;
 
             out += `
-                <h1 class="titleWebSits"><span> web </span> site  - ${count} </h1>
+                <h1 class="titleWebSits"><span> web </span> Site &<span> App </span>  - ${count} </h1>
           `;
 
             placeholder.innerHTML = out;
@@ -399,7 +564,6 @@ function menu() {
         menu.classList.remove('fa-times');
         header.classList.remove('active');
     }
-
 }
 
 
@@ -449,23 +613,17 @@ function changeLanguage() {
     //menu
     const homeMenu = document.querySelector('.homeMenu');
     const homeAbout = document.querySelector('.homeAbout');
-    const homeSkils = document.querySelector('.homeSkils');
     const homeExperience = document.querySelector('.homeExperience');
     const homePortfolio = document.querySelector('.homePortfolio');
     const homeContact = document.querySelector('.homeContact');
 
     const select = document.querySelector('.select');
 
-
-
     const name = document.querySelector('.name');
     const TextTitle = document.querySelector('.text');
     const AboutBtn = document.querySelector('.btn');
 
-
     //about me text
-    const aboutMeTitle = document.querySelector('.heading');
-    // const nameAbout = document.querySelector('.nameAbout');
     const aboutMe = document.querySelector('.aboutMe');
     const aboutMeAge = document.querySelector('.age');
     const aboutMeGender = document.querySelector('.gender');
@@ -473,34 +631,19 @@ function changeLanguage() {
     const aboutMeCountry = document.querySelector('.country');
     const aboutMeImmigrated = document.querySelector('.immigrated');
     const downloadCVen = document.querySelector('.CVen');
-    const downloadCVhe = document.querySelector('.CVhe');
-
-
-
-
-    //skils text
-    const skileTitle = document.querySelector('.mySkile');
-
 
     //Experience text
-    const myExperience = document.querySelector('.myExperience');
     const titleMyExperienc1 = document.querySelector('.titleMyExperience1');
     const titleMyExperienc2 = document.querySelector('.titleMyExperience2');
     const titleMyExperienc3 = document.querySelector('.titleMyExperience3');
+    const titleMyExperienc4 = document.querySelector('.titleMyExperience4');
+
     const aboutMyExperience1 = document.querySelector('.aboutMyExperience1');
     const aboutMyExperience2 = document.querySelector('.aboutMyExperience2');
     const aboutMyExperience3 = document.querySelector('.aboutMyExperience3');
-
-
-    //portfolio text
-    const myPortfolio = document.querySelector('.myPortfolio');
-    // const PortWeb = document.querySelector('.PortWeb');
-    // const PortAndroid = document.querySelector('.PortAndroid');
-    // const PortPython = document.querySelector('.PortPython');
-
+    const aboutMyExperience4 = document.querySelector('.aboutMyExperience4');
 
     //Contact text
-    const myContact = document.querySelector('.myContact');
     const contactEmail = document.querySelector('.contactEmail');
     const contactPhone = document.querySelector('.contactPhone');
     const contactAddress = document.querySelector('.contactAddress');
@@ -524,18 +667,13 @@ function changeLanguage() {
 
             const attr = el.getAttribute('language');
 
-
-
             //menu
             homeMenu.textContent = data[attr].homeMenu;
             homeAbout.textContent = data[attr].homeAbout;
-            homeSkils.textContent = data[attr].homeSkils;
             homeExperience.textContent = data[attr].homeExperience;
             homePortfolio.textContent = data[attr].homePortfolio;
             homeContact.textContent = data[attr].homeContact;
             select.textContent = data[attr].select;
-
-
 
             //start page
             titleEl.textContent = data[attr].hi;
@@ -544,11 +682,7 @@ function changeLanguage() {
             AboutBtn.textContent = data[attr].btn1;
             name.textContent = data[attr].titleName;
 
-
-
             //about me text
-            aboutMeTitle.textContent = data[attr].titleAboutMe;
-            // nameAbout.textContent = data[attr].name;
             aboutMe.textContent = data[attr].aboutMe;
             aboutMeAge.textContent = data[attr].aboutMeAge;
             aboutMeGender.textContent = data[attr].aboutMeGender;
@@ -556,37 +690,23 @@ function changeLanguage() {
             aboutMeCountry.textContent = data[attr].aboutMeCountry;
             aboutMeImmigrated.textContent = data[attr].aboutMeImmigrated;
             downloadCVen.textContent = data[attr].downloadCVen;
-            downloadCVhe.textContent = data[attr].downloadCVhe;
-
-
-            //skils text
-            skileTitle.textContent = data[attr].skileTitle;
-
 
             //Experience text
-            myExperience.textContent = data[attr].myExperience;
             titleMyExperienc1.textContent = data[attr].titleMyExperience1;
             titleMyExperienc2.textContent = data[attr].titleMyExperience2;
             titleMyExperienc3.textContent = data[attr].titleMyExperience3;
+            titleMyExperienc4.textContent = data[attr].titleMyExperience4;
+
             aboutMyExperience1.textContent = data[attr].aboutMyExperience1;
             aboutMyExperience2.textContent = data[attr].aboutMyExperience2;
             aboutMyExperience3.textContent = data[attr].aboutMyExperience3;
-
-
-            //portfolio text
-            myPortfolio.textContent = data[attr].myPortfolio;
-            // PortWeb.textContent = data[attr].PortWeb;
-            // PortAndroid.textContent = data[attr].PortAndroid;
-            // PortPython.textContent = data[attr].PortPython;
-
+            aboutMyExperience4.textContent = data[attr].aboutMyExperience4;
 
             //Contact text
-            myContact.textContent = data[attr].myContact;
             contactEmail.textContent = data[attr].contactEmail;
             contactPhone.textContent = data[attr].contactPhone;
             contactAddress.textContent = data[attr].contactAddress;
             contactAddressWhere.textContent = data[attr].contactAddressWhere;
-
 
             //send email
             Name.placeholder = data[attr].Name;
@@ -602,62 +722,45 @@ function changeLanguage() {
         "hebrew": {
 
             //menu
-            "homeMenu": " ====",
-            "homeAbout": "=====",
-            "homeSkils": " ===== ",
-            "homeExperience": "====",
-            "homePortfolio": "======  ",
-            "homeContact": " ====== ",
+            "homeMenu": " בית ",
+            "homeAbout": " קצת עליי ",
+            "homeExperience": " ניסיון ",
+            "homePortfolio": " תיק עבודות ",
+            "homeContact": " יצירת קשר ",
             "select": ": בחר שפה ",
 
             //start page
-            "titleName": " אני  ",
-            "hi": "שלום לכולם",
-            "info": "  = = = |==== = = = = =",
-            "text": ".= = = = = , = = = = = = === = = = =",
-            "btn1": "קצת עליי",
+            "titleName": " ---------- ---------- ----------",
+            "hi": "---------- ----------",
+            "info": " --------------------- ---------- & ---------- 👨🏻‍💻 ---------- ---------- ----------",
+            "text": ".י--------------------",
+            "btn1": "---------- ----------",
 
             //about me text
-            "titleAboutMe": ": קצת עליי",
-            "aboutMe": "= = = = = = .  = = = = = = = = = = = = =.           = = = = = = = = = = = , = = = = = = = = = =  .  = = =/= .        = כ=ל = = = = = = = = === = = = =.         = = : (= ,== = = = , = , = = = = = =).",
-            "aboutMeAge": "גיל : =",
-            "aboutMeGender": "מין : =",
-            "aboutMeLanguage": "שפות : = , = , ===",
-            "aboutMeCountry": "מדינה : =",
-            "aboutMeImmigrated": "= = = : = =",
+            "aboutMe": "----------. ----------.",
+            "aboutMeAge": "גיל : ----------",
+            "aboutMeGender": "מין : ----------",
+            "aboutMeLanguage": "שפות : ---------- , ---------- , ----------",
+            "aboutMeCountry": "מדינה : ----------",
+            "aboutMeImmigrated": "עליתי ארצה מ : ---------- ----------",
             "downloadCVen": " (English)להורדה קורות חיים ",
-            "downloadCVhe": "  (עברית)להורדה קורות חיים  ",
-
-
-
-            //skils text
-            "skileTitle": ": כישרונות שלי",
-
-
-
 
             //Experience text
-            "myExperience": ": ניסיון",
-            "titleMyExperience1": "= = =",
-            "titleMyExperience2": "= = , =.=.=",
-            "titleMyExperience3": "=-=",
-            "aboutMyExperience1": "= = = = , = = = = =",
-            "aboutMyExperience2": " = = = = , = = = = =. = = = = =,= = =# , = , = , = , = = , = , = , = = = , = , = (=) , =/===",
-            "aboutMyExperience3": "= = = = , = = = = = , === = = =",
+            "titleMyExperience1": "---------- ---------- ----------",
+            "titleMyExperience2": "---------- ---------- , ----------.----------.----------",
+            "titleMyExperience3": "---------------------",
+            "titleMyExperience4": "---------- ---------- ----------",
 
-
-
-            //portfolio text
-            "myPortfolio": ": תיק עבודות שלי",
-
-
+            "aboutMyExperience1": "-----------------------------",
+            "aboutMyExperience2": " ---------- ---------- ---------- ---------- , ---------- ------------------------------ , --------------------/----------",
+            "aboutMyExperience3": "---------- ----------",
+            "aboutMyExperience4": "-------------------- ----------.",
 
             //Contact text
-            "myContact": "יצירת קשר",
             "contactEmail": "דואר אלקטרוני",
             "contactPhone": "מספר טלפון שלי",
             "contactAddress": "כתובת",
-            "contactAddressWhere": "= - = =",
+            "contactAddressWhere": "---------- - ---------- ----------",
 
             //send email
             "Name": " שם פרטי שלך ",
@@ -698,12 +801,9 @@ function sendMail() {
 
     else {
 
-        // here private date mail
-        emailjs.send('', '', tempParams)
+        emailjs.send('privateData', 'privateData', tempParams)
 
             .then(function (res) {
-                // console.log("good", res.status);
-
                 Swal.fire({
                     html: '<h4>success send your messsage</h4>',
                     icon: 'success',
