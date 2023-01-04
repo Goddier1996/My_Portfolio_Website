@@ -338,8 +338,7 @@ header .follow a:hover {
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
-    margin-top: -5%;
-
+    margin-top: -12%;
 }
 
 .home .image {
@@ -1011,10 +1010,24 @@ header .follow a:hover {
 }
 
 .showDimeDate p {
-    font-size: 16px;
+    font-size: 15px;
     color: rgba(102, 102, 102, 0.793);
     font-weight: 600;
 }
+
+.showDate {
+    text-align: center;
+}
+
+.hightImage {
+    font-size: 30px;
+}
+
+.styleModelDate {
+    align-items: center;
+    text-align: center;
+}
+
 
 
 @media(max-width:991px) {

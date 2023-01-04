@@ -69,7 +69,35 @@ function popup() {
 function showDataDime() {
 
     const data = new Date();
-    let showDate = `${data.getDay() + 1} / ${data.getMonth() + 1} / ${data.getFullYear()}`
+    let showResult = ``;
+
+
+    if (data.getHours() >= 6 && data.getHours() <= 12) {
+        console.log("Good morning")
+        showResult = `<div class="styleModelDate"><b class="highlight">Good morning</b>
+        <b class="hightImage">🌅</b></div>
+        Welcome to my Portfolio`;
+    }
+
+    if (data.getHours() >= 12 && data.getHours() <= 17) {
+        showResult = `<div class="styleModelDate"><b class="highlight">Good afternoon</b>
+        <b class="hightImage">🌞</b></div>
+        Welcome to my Portfolio`;
+    }
+
+    if (data.getHours() >= 18 && data.getHours() <= 20) {
+        showResult = `<div class="styleModelDate"><b class="highlight">Good evening</b>
+        <b class="hightImage">🌃</b></div>
+        Welcome to my Portfolio`;
+    }
+
+    if (data.getHours() >= 20 && data.getHours() <= 5) {
+        showResult = `<div class="styleModelDate"><b class="highlight">Good night</b>
+        <b class="hightImage">🌜</b></div>
+        Welcome to my Portfolio`;
+    }
+
+    let showDate = `${showResult} <br/> <p class="showDate">${data.getDay() + 1} / ${data.getMonth() + 1} / ${data.getFullYear()}</p> `
     document.querySelector("#dayMonthYear").innerHTML = showDate;
 }
 
