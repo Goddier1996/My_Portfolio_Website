@@ -338,7 +338,7 @@ header .follow a:hover {
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
-    margin-top: -12%;
+    margin-top: -13%;
 }
 
 .home .image {
@@ -421,12 +421,12 @@ header .follow a:hover {
     padding: .1rem 0;
 }
 
-.box a {
+/* .box p {
     color: #666;
     font-size: 1.7rem;
     padding: .5rem 0;
     font-weight: bold;
-}
+} */
 
 .about .row-1 .content .box-container {
     display: flex;
@@ -439,9 +439,15 @@ header .follow a:hover {
     flex: 1 1 20rem;
 }
 
-.about .row-1 .content .box-container .box span {
+/* .about .row-1 .content .box-container .box span {
     color: #151b1f;
     font-weight: 500;
+} */
+
+.box {
+    color: #151b1f;
+    font-weight: 500;
+    font-size: 14px;
 }
 
 .about .row-2 {
@@ -1004,7 +1010,7 @@ header .follow a:hover {
 
 /* show Date time in heater page */
 .showDimeDate {
-    padding: 3%;
+    padding: 6%;
     display: flex;
     justify-content: flex-end;
 }
@@ -1027,7 +1033,7 @@ header .follow a:hover {
     animation: spin 10s linear infinite;
 }
 
-.hightImageNotHaveAnimation{
+.hightImageNotHaveAnimation {
     font-size: 32px;
     position: absolute;
 }
@@ -1052,6 +1058,12 @@ header .follow a:hover {
 }
 
 
+.styleModelDate {
+    align-items: center;
+    text-align: center;
+}
+
+
 
 @media(max-width:991px) {
 
@@ -1062,7 +1074,7 @@ header .follow a:hover {
     }
 
     .showDimeDate p {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .content a {
@@ -1113,6 +1125,20 @@ header .follow a:hover {
     .HighQImg {
         display: flex;
         justify-content: center;
+    }
+
+
+    .hightImage {
+        font-size: 28px;
+        position: absolute;
+        -webkit-animation: spin 10s linear infinite;
+        -moz-animation: spin 10s linear infinite;
+        animation: spin 10s linear infinite;
+    }
+
+    .hightImageNotHaveAnimation {
+        font-size: 30px;
+        position: absolute;
     }
 
 }

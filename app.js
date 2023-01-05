@@ -70,33 +70,39 @@ function showDataDime() {
 
     const data = new Date();
     let showResult = ``;
+    let timeData = data.getHours();
 
-    if (data.getHours() >= 5 || data.getHours() <= 12) {
+    if (timeData >= 5 && timeData <= 11) {
         showResult = `<div class="styleModelDate">Good morning
-        <b class="hightImageNotHaveAnimation">🌅</b></div>`;
+        <b class="hightImage">🌤️</b></div>`;
 
-        document.body.style.backgroundImage = "url(/images/9.png)";
+        // document.getElementById('titleName').style.color = 'red';
+        // document.getElementById('infoAboutUser').style.color = 'red';
+        // document.getElementById('infoWhatCanCreate').style.color = 'red';
+        // document.getElementById('aboutUser').style.color = 'red';
+        // document.getElementById('privateDataUser').style.color = 'red';
     }
 
-    if (data.getHours() >= 12 || data.getHours() <= 17) {
+    if (timeData >= 12 && timeData <= 16) {
         showResult = `<div class="styleModelDate">Good afternoon
-        <b class="hightImage">🌞</b></div>`;
+        <b class="hightImage">☀️</b></div>`;
 
-        document.body.style.backgroundImage = "url(/images/9.png)";
+        // document.body.style.backgroundImage = "url(/images/9.png)";
+        // document.getElementById('titleName').style.color = 'white';
+        // document.getElementById('infoAboutUser').style.color = 'white';
+        // document.getElementById('infoWhatCanCreate').style.color = 'white';
+        // document.getElementById('aboutUser').style.color = 'white';
+        // document.getElementById('privateDataUser').style.color = 'white';
     }
 
-    if (data.getHours() >= 17 || data.getHours() <= 20) {
+    if (timeData >= 17 && timeData <= 19) {
         showResult = `<div class="styleModelDate">Good evening
-        <b class="hightImageNotHaveAnimation">🌃</b></div>`;
-
-        document.body.style.backgroundImage = "url(/images/10.png)";
+        <b class="hightImage">⭐</b></div>`;
     }
 
-    if (data.getHours() >= 20 || data.getHours() <= 5) {
+    if (timeData >= 20 && timeData <= 4) {
         showResult = `<div class="styleModelDate">Good night
-        <b class="hightImage">🌜</b></div>`;
-
-        document.body.style.backgroundImage = "url(/images/10.png)";
+        <b class="hightImage">🌙</b></div>`;
     }
 
     let showDate = `${showResult}  <p class="showDate">${data.getDay() + 1} / ${data.getMonth() + 1} / ${data.getFullYear()}</p> `
