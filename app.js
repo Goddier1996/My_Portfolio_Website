@@ -1,69 +1,29 @@
+function init() {
 
-//menu responsive
-menu();
+    menu();
 
-//load pop auto when web site up
-popup()
+    showDataDime();
+    StyleCursor();
 
-//style cursor in web site
-StyleCursor();
+    autoShopCarusel();
 
-//show data web site from json file
-ShowDataJsonMyWorksWebSite();
+    TapsPortfolio();
 
-//show data android app from json file
-ShowDataJsonMyWorksAppAndroid();
+    ShowDataJsonMyWorksWebSite();
+    ShowDataJsonMyWorksAppAndroid();
+    ShowDataJsonMyWorksPython();
+    ShowDataJsonMyWorksArtuino();
 
-//show data python from json file
-ShowDataJsonMyWorksPython();
+    CountProjectsWeb();
+    CountProjectsAppPython();
+    CountProjectsAppAndroid();
+    CountProjectsAppArtuino();
 
-//show data C# from json file
-ShowDataJsonMyWorksArtuino();
+    changeLanguage();
+}
 
-//count web
-CountProjectsWeb();
+init()
 
-//count python
-CountProjectsAppPython();
-
-//count Android apps in json file
-CountProjectsAppAndroid();
-
-//count artuino apps in json file
-CountProjectsAppArtuino();
-
-
-//show my skils from josn file
-// ShowDataJsonMySkils();
-// ShowDataJsonMySkils2();
-// ShowDataJsonMySkils3();
-// ShowDataJsonMySkils4();
-// ShowDataJsonMySkils5();
-// ShowDataJsonMySkils6();
-autoShopCarusel();
-
-
-//taps protfolio
-TapsPortfolio();
-
-//seleact language
-changeLanguage();
-
-showDataDime();
-
-
-//pop up auto when load page
-function popup() {
-
-    // Swal.fire({
-    //     background: 'none',
-    //     showConfirmButton: false,
-    //     timer: 1000,
-    //     html: '<img class="popUp" src="https://miro.medium.com/max/1360/1*IRGHmiGsa16stedQvIaZfw.gif"></img>'
-    // })
-
-
-};
 
 
 function showDataDime() {
@@ -73,45 +33,35 @@ function showDataDime() {
     let timeData = data.getHours();
 
     if (timeData >= 5 && timeData <= 11) {
+
         showResult = `<div class="styleModelDate">Good morning
         <b class="hightImage">🌤️</b></div>`;
-
-        // document.getElementById('titleName').style.color = 'red';
-        // document.getElementById('infoAboutUser').style.color = 'red';
-        // document.getElementById('infoWhatCanCreate').style.color = 'red';
-        // document.getElementById('aboutUser').style.color = 'red';
-        // document.getElementById('privateDataUser').style.color = 'red';
     }
 
     if (timeData >= 12 && timeData <= 16) {
+
         showResult = `<div class="styleModelDate">Good afternoon
         <b class="hightImage">☀️</b></div>`;
-
-        // document.body.style.backgroundImage = "url(/images/9.png)";
-        // document.getElementById('titleName').style.color = 'white';
-        // document.getElementById('infoAboutUser').style.color = 'white';
-        // document.getElementById('infoWhatCanCreate').style.color = 'white';
-        // document.getElementById('aboutUser').style.color = 'white';
-        // document.getElementById('privateDataUser').style.color = 'white';
     }
 
     if (timeData >= 17 && timeData <= 19) {
         showResult = `<div class="styleModelDate">Good evening
-        <b class="hightImage">⭐</b></div>`;
+        <b class="hightImage">✨</b></div>`;
     }
 
-    if (timeData >= 20 && timeData <= 4) {
+    if (timeData >= 20 || timeData <= 4) {
         showResult = `<div class="styleModelDate">Good night
-        <b class="hightImage">🌙</b></div>`;
+        <b class="hightImage">🌕</b></div>`;
     }
 
-    let showDate = `${showResult}  <p class="showDate">${data.getDay() + 1} / ${data.getMonth() + 1} / ${data.getFullYear()}</p> `
+    let showDate = `${showResult}  <p class="showDate">${data.getDay() + 1} / ${data.getMonth() + 1} / ${data.getFullYear()}</p> `;
     document.querySelector("#dayMonthYear").innerHTML = showDate;
 }
 
 
 
 function autoShopCarusel() {
+
     let root = document.documentElement; //לקחת מ css
     let marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
     let marqueeContent = document.querySelector("ul.marquee-content");
@@ -140,8 +90,6 @@ function showInfoPortfolio(info, videoInfo) {
 
 
 
-
-//show my web works from json file
 function ShowDataJsonMyWorksWebSite() {
 
     fetch("/json/WebSites.json")
@@ -172,15 +120,12 @@ function ShowDataJsonMyWorksWebSite() {
           `;
             }
 
-
             placeholder.innerHTML = out;
         });
 }
 
 
 
-
-//show my app android works from json file
 function ShowDataJsonMyWorksAppAndroid() {
 
     fetch("/json/AppAndroid.json")
@@ -215,7 +160,6 @@ function ShowDataJsonMyWorksAppAndroid() {
 
 
 
-//show my python works from json file
 function ShowDataJsonMyWorksPython() {
 
     fetch("/json/Python.json")
@@ -250,8 +194,6 @@ function ShowDataJsonMyWorksPython() {
 
 
 
-
-//show my artuino works from json file
 function ShowDataJsonMyWorksArtuino() {
 
     fetch("/json/Artuino.json")
@@ -286,172 +228,6 @@ function ShowDataJsonMyWorksArtuino() {
 
 
 
-
-//show my skils from json file
-// function ShowDataJsonMySkils() {
-
-//     fetch("/json/skilsFront.json")
-
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (products) {
-
-//             let placeholder = document.querySelector("#box");
-//             let out = "";
-
-//             for (let product of products) {
-//                 out += `
-//                 <div class="box">
-//                     <img src="${product.image}"  width="auto" height="70">
-//                 </div>
-//           `;
-//             }
-
-//             placeholder.innerHTML = out;
-//         });
-// }
-
-
-
-// function ShowDataJsonMySkils2() {
-
-//     fetch("/json/backend.json")
-
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (products) {
-
-//             let placeholder = document.querySelector("#box2");
-//             let out = "";
-
-//             for (let product of products) {
-//                 out += `
-
-
-//                 <div class="box">
-//                     <img src="${product.image}"  width="auto" height="70">
-//                 </div>
-//           `;
-//             }
-
-//             placeholder.innerHTML = out;
-//         });
-// }
-
-
-// function ShowDataJsonMySkils3() {
-
-//     fetch("/json/dataBase.json")
-
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (products) {
-
-//             let placeholder = document.querySelector("#box3");
-//             let out = "";
-
-//             for (let product of products) {
-//                 out += `
-
-
-//                 <div class="box">
-//                     <img src="${product.image}"  width="auto" height="70">
-//                 </div>
-//           `;
-//             }
-
-//             placeholder.innerHTML = out;
-//         });
-// }
-
-
-// function ShowDataJsonMySkils4() {
-
-//     fetch("/json/Algorithm .json")
-
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (products) {
-
-//             let placeholder = document.querySelector("#box4");
-//             let out = "";
-
-//             for (let product of products) {
-//                 out += `
-
-
-//                 <div class="box">
-//                     <img src="${product.image}"  width="auto" height="70">
-//                 </div>
-//           `;
-//             }
-
-//             placeholder.innerHTML = out;
-//         });
-// }
-
-
-// function ShowDataJsonMySkils5() {
-
-//     fetch("/json/adobe.json")
-
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (products) {
-
-//             let placeholder = document.querySelector("#box5");
-//             let out = "";
-
-//             for (let product of products) {
-//                 out += `
-
-
-//                 <div class="box">
-//                     <img src="${product.image}"  width="auto" height="70">
-//                 </div>
-//           `;
-//             }
-
-//             placeholder.innerHTML = out;
-//         });
-// }
-
-
-// function ShowDataJsonMySkils6() {
-
-//     fetch("/json/Other.json")
-
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (products) {
-
-//             let placeholder = document.querySelector("#box6");
-//             let out = "";
-
-//             for (let product of products) {
-//                 out += `
-
-
-//                 <div class="box">
-//                     <img src="${product.image}"  width="auto" height="70">
-//                 </div>
-//           `;
-//             }
-
-//             placeholder.innerHTML = out;
-//         });
-// }
-
-
-
-
-//count web
 function CountProjectsWeb() {
 
     fetch("/json/WebSites.json")
@@ -475,7 +251,6 @@ function CountProjectsWeb() {
 
 
 
-//count app android
 function CountProjectsAppAndroid() {
 
     fetch("/json/AppAndroid.json")
@@ -500,7 +275,6 @@ function CountProjectsAppAndroid() {
 
 
 
-//count python app
 function CountProjectsAppPython() {
 
     fetch("/json/Python.json")
@@ -525,7 +299,6 @@ function CountProjectsAppPython() {
 
 
 
-//count app artuino
 function CountProjectsAppArtuino() {
 
     fetch("/json/Artuino.json")
@@ -550,7 +323,6 @@ function CountProjectsAppArtuino() {
 
 
 
-//taps in my portfolio
 function TapsPortfolio() {
 
     const tabs = document.querySelector('.tabs');
@@ -585,7 +357,6 @@ function TapsPortfolio() {
 
 
 
-//menu
 function menu() {
 
     let menu = document.querySelector('#menu-bars');
@@ -635,8 +406,6 @@ function StyleCursor() {
 
 
 
-
-//change Language
 function changeLanguage() {
 
     //start page
@@ -766,37 +535,37 @@ function changeLanguage() {
             "select": ": בחר שפה ",
 
             //start page
-            "titleName": " ---------- ---------- ----------",
-            "hi": "---------- ----------",
-            "info": " --------------------- ---------- & ---------- 👨🏻‍💻 ---------- ---------- ----------",
-            "text": ".י--------------------",
-            "btn1": "---------- ----------",
+            "titleName": " אני ארטיום קוט",
+            "hi": "שלום לכולם",
+            "info": " Front-End Developer & Mobile אני הנדסאי תוכנה",
+            "text": ".יצירת פיתוח של אתרי אינטרנט וגם אפליקציות למובייל.ובנוסף יוצר תוכנת אלגוריתמים ומסד נתונים",
+            "btn1": "קצת עליי",
 
             //about me text
-            "aboutMe": "----------. ----------.",
-            "aboutMeAge": "גיל : ----------",
-            "aboutMeGender": "מין : ----------",
-            "aboutMeLanguage": "שפות : ---------- , ---------- , ----------",
-            "aboutMeCountry": "מדינה : ----------",
-            "aboutMeImmigrated": "עליתי ארצה מ : ---------- ----------",
+            "aboutMe": "היי אני מומחה צעיר הנדסאי תוכנה.יוצר מגוון של פרוייקטים אתרי אינטרנט ואפליקציות ובנוסף יוצר אלגוריתם ותוכנות מסד נתונים.אני אוהב את העבודה שלי בתכנות ולאתגר את עצמי בדברים חדשים , אפשר לראות מגוון של פרוייקטים שונים שביצעתי בתיק העבודות שלי.יכולת עבודה בקבוצה/עצמאית .לומד כל יום דברים חדשים בתכנות ובנוסף לומד להתמודד עם בעיות שקיימות במהלך יצירת פרוייקטים. התחבבים שלי : (גיימר , לעקוב אחרי טכנולוגיות חדשות , רכבים , וטיול במגוון מקומות יפים שיש בעולם).",
+            "aboutMeAge": "גיל : 26",
+            "aboutMeGender": "מין : זכר",
+            "aboutMeLanguage": "שפות : עברית , אנגלית , רוסית",
+            "aboutMeCountry": "מדינה : ישראל",
+            "aboutMeImmigrated": "עליתי ארצה מ : אוקראינה 2001",
             "downloadCVen": " (English)להורדה קורות חיים ",
 
             //Experience text
-            "titleMyExperience1": "---------- ---------- ----------",
-            "titleMyExperience2": "---------- ---------- , ----------.----------.----------",
-            "titleMyExperience3": "---------------------",
-            "titleMyExperience4": "---------- ---------- ----------",
+            "titleMyExperience1": "צבא הגנה ישראל",
+            "titleMyExperience2": "שנקר הנדסאים , הנדסה.עיצוב.אמנות",
+            "titleMyExperience3": "High-Q",
+            "titleMyExperience4": "יצירת תיק עבודות",
 
-            "aboutMyExperience1": "-----------------------------",
-            "aboutMyExperience2": " ---------- ---------- ---------- ---------- , ---------- ------------------------------ , --------------------/----------",
-            "aboutMyExperience3": "---------- ----------",
-            "aboutMyExperience4": "-------------------- ----------.",
+            "aboutMyExperience1": "שירות בתפקיד תומך לחימה , בחיל טכנולוגיה ואחזקה 3 שנים",
+            "aboutMyExperience2": " למדתי תואר הנדסאי תוכנה , בשנה הראשונה קיבלתי תעודת הצטיינות. מתמחה במבני נתונים ומונחה עצמאים,בנוסף למדתי C# , Python , JavaScript , ReactJs , React Native , NodeJs , Microsoft SQL Server , Java Android Development , Git , Arduino (C) , Ux/Ui",
+            "aboutMyExperience3": "ביצעתי השלמת תעודת בגרות , כדאי לקבל תעודת בגרות מלאה , עבור לימודי הנדסאי תוכנה",
+            "aboutMyExperience4": "יצירת אתרי אינטרנט , מסד נתונים , אלגוריתם . כל הפרוייקטים נשמרים בגיט . יוצר תיק עבודות להרחבת ידע ומגוון פרויקטים, לראיונות עבודה.",
 
             //Contact text
             "contactEmail": "דואר אלקטרוני",
             "contactPhone": "מספר טלפון שלי",
             "contactAddress": "כתובת",
-            "contactAddressWhere": "---------- - ---------- ----------",
+            "contactAddressWhere": "ישראל - כפר יונה",
 
             //send email
             "Name": " שם פרטי שלך ",

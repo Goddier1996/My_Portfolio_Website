@@ -59,6 +59,7 @@
     font-size: 13px;
     color: #fff;
     text-decoration: none;
+
 }
 
 .langWrap p {
@@ -72,6 +73,13 @@
     --border-color: grey;
     font-size: 60.5%;
     box-sizing: border-box;
+
+    /* this for auto carousel skills */
+    --marquee-width: 100%;
+    --marquee-height: 15vh;
+    --marquee-elements-displayed: 8;
+    --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
 }
 
 * {
@@ -170,7 +178,7 @@ section {
 
 .titleWebSits {
     font-size: 14px;
-    color: #111;
+    color: rgba(33, 33, 33, 0.793);
     text-transform: uppercase;
 }
 
@@ -346,7 +354,7 @@ header .follow a:hover {
 }
 
 .home .image img {
-    width: 65%;
+    transform: rotate(10deg);
 }
 
 .home .content {
@@ -354,14 +362,15 @@ header .follow a:hover {
 }
 
 .home .content .hi {
-    font-size: 2rem;
+    font-size: 16px;
     color: var(--main-color);
+    font-weight: 600;
 }
 
 .home .content h3 {
     font-size: 25px;
-    color: #374148;
-    text-transform: uppercase;
+    color: rgba(33, 33, 33, 0.793);
+    font-weight: 600;
 }
 
 .home .content h3 span {
@@ -370,14 +379,16 @@ header .follow a:hover {
 }
 
 .home .content .info {
-    font-size: 16.5px;
-    color: #151b1f;
+    font-size: 16px;
+    color: rgba(102, 102, 102, 0.793);
+    font-weight: 600;
     padding: .5rem 0;
 }
 
 .home .content .text {
     font-size: 14px;
-    color: #374148;
+    color: rgba(102, 102, 102, 0.793);
+    font-weight: 600;
     padding: .5rem 0;
 }
 
@@ -416,17 +427,12 @@ header .follow a:hover {
 }
 
 .about .row-1 .content p {
-    color: #151b1f;
+    color: rgba(102, 102, 102, 0.793);
+    font-weight: 600;
     font-size: 14px;
     padding: .1rem 0;
 }
 
-/* .box p {
-    color: #666;
-    font-size: 1.7rem;
-    padding: .5rem 0;
-    font-weight: bold;
-} */
 
 .about .row-1 .content .box-container {
     display: flex;
@@ -439,14 +445,10 @@ header .follow a:hover {
     flex: 1 1 20rem;
 }
 
-/* .about .row-1 .content .box-container .box span {
-    color: #151b1f;
-    font-weight: 500;
-} */
 
 .box {
-    color: #151b1f;
-    font-weight: 500;
+    color: rgba(102, 102, 102, 0.793);
+    font-weight: 600;
     font-size: 14px;
 }
 
@@ -658,7 +660,8 @@ header .follow a:hover {
 .experience .box-container .box .content h3 {
     font-size: 18px;
     padding: .5rem 0;
-    color: #111;
+    color: rgba(33, 33, 33, 0.793);
+    font-weight: 600;
 }
 
 .experience .box-container .box .content p {
@@ -716,14 +719,15 @@ header .follow a:hover {
 .portfolio .box-container .box h3 {
     position: absolute;
     left: 1rem;
-    font-size: 15px;
-    color: #333;
+    font-size: 16px;
+    color: rgba(33, 33, 33, 0.793);
+    font-weight: 600;
     bottom: .5rem;
 }
 
 
 .skilsPortfolio {
-    color: rgba(51, 51, 51, 0.64);
+    color: rgba(102, 102, 102, 0.793);
     font-size: 12px;
 }
 
@@ -783,14 +787,16 @@ header .follow a:hover {
 }
 
 .contact .icons-container .icons h3 {
-    color: #111;
+    color: rgba(33, 33, 33, 0.793);
+    font-weight: 600;
     font-size: 17px;
     padding: .5rem 0;
     padding-top: 1rem;
 }
 
 .contact .icons-container .icons p {
-    color: #666;
+    color: rgba(102, 102, 102, 0.793);
+    font-weight: 600;
     font-size: 14px;
     text-decoration: none;
 }
@@ -822,7 +828,8 @@ header .follow a:hover {
 .contact .row form textarea {
     width: 100%;
     border-bottom: .1rem solid #333;
-    color: #333;
+    color: rgba(102, 102, 102, 0.793);
+    font-weight: 600;
     text-transform: none;
     font-size: 14px;
     padding: 1rem 0;
@@ -1064,6 +1071,29 @@ header .follow a:hover {
 }
 
 
+@media screen and (min-width:801px) and (min-width:1025px) {
+
+    .home .image img {
+        width: 90%;
+    }
+}
+
+
+
+
+@media (min-width:1281px) {
+
+    .home .image img {
+        width: 65%;
+    }
+}
+
+
+
+/* @media screen and (min-width:320px) and  (min-width:480px)  {
+} */
+
+
 
 @media(max-width:991px) {
 
@@ -1114,7 +1144,6 @@ header .follow a:hover {
 
     .home .image img {
         width: 250px;
-        height: 250px;
     }
 
     .dipImg {
@@ -1143,18 +1172,11 @@ header .follow a:hover {
 
 }
 
+
+
 /* show skils carousel */
 .Brands {
     margin-top: 2%;
-}
-
-
-:root {
-    --marquee-width: 100%;
-    --marquee-height: 15vh;
-    --marquee-elements-displayed: 8;
-    --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
-    --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
 }
 
 .marquee {
