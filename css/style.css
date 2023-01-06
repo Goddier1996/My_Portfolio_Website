@@ -18,11 +18,18 @@
     font-size: 10px;
 }
 
+
+.popUpShabbatShalom {
+    border-radius: 10%;
+    height: 200px;
+}
+
 .infoApp video {
     height: auto;
     width: 100%;
     border-radius: 15px;
 }
+
 
 .popUp {
     background-size: cover;
@@ -254,7 +261,12 @@ header {
     padding: 8rem 2rem;
     width: 30rem;
     text-align: center;
+    --m:
+        conic-gradient(from -135deg at right, #151b1f, #151b1f 1deg 89deg, #0000 90deg) right/100% 10px repeat-y;
+    -webkit-mask: var(--m);
+    mask: var(--m);
 }
+
 
 header .logo {
     text-transform: uppercase;
@@ -346,7 +358,7 @@ header .follow a:hover {
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
-    margin-top: -13%;
+    margin-top: -19%;
 }
 
 .home .image {
@@ -403,8 +415,6 @@ header .follow a:hover {
 }
 
 .about .row-1 .image img {
-    height: auto;
-    width: 70%;
     border-radius: .5rem;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 }
@@ -1017,7 +1027,7 @@ header .follow a:hover {
 
 /* show Date time in heater page */
 .showDimeDate {
-    padding: 6%;
+    padding: 8%;
     display: flex;
     justify-content: flex-end;
 }
@@ -1033,17 +1043,14 @@ header .follow a:hover {
 }
 
 .hightImage {
-    font-size: 30px;
+    font-size: 40px;
     position: absolute;
     -webkit-animation: spin 10s linear infinite;
     -moz-animation: spin 10s linear infinite;
     animation: spin 10s linear infinite;
 }
 
-.hightImageNotHaveAnimation {
-    font-size: 32px;
-    position: absolute;
-}
+
 
 @-moz-keyframes spin {
     100% {
@@ -1076,15 +1083,22 @@ header .follow a:hover {
     .home .image img {
         width: 90%;
     }
+
+    .about .row-1 .image img {
+        width: 90%;
+    }
 }
-
-
 
 
 @media (min-width:1281px) {
 
     .home .image img {
         width: 65%;
+    }
+
+    .about .row-1 .image img {
+        height: auto;
+        width: 60%;
     }
 }
 
@@ -1156,14 +1170,6 @@ header .follow a:hover {
         justify-content: center;
     }
 
-
-    .hightImage {
-        font-size: 28px;
-        position: absolute;
-        -webkit-animation: spin 10s linear infinite;
-        -moz-animation: spin 10s linear infinite;
-        animation: spin 10s linear infinite;
-    }
 
     .hightImageNotHaveAnimation {
         font-size: 30px;

@@ -1,5 +1,6 @@
 function init() {
 
+    popUpSayShabbatShalom();
     menu();
 
     showDataDime();
@@ -22,15 +23,38 @@ function init() {
     changeLanguage();
 }
 
-init()
+init();
+
+
+
+function popUpSayShabbatShalom() {
+
+    let day = new Date();
+
+    if (day.getDay() + 1 == 6 || day.getDay() + 1 == 7) {
+
+        Swal.fire({
+            title: '<img class="popUpShabbatShalom" src="https://i.postimg.cc/L59Hbp5m/image-processing20191022-9183-1x6u2a4.gif"></img>',
+            background: 'none',
+            showConfirmButton: false,
+            timer: 4000,
+        })
+    }
+}
 
 
 
 function showDataDime() {
 
-    const data = new Date();
+    const dateCheckHourAndDay = new Date();
+    const showDateDayMonthYear = new Date().toLocaleDateString("de-DE");;
+
+    let timeData = dateCheckHourAndDay.getHours();
+    let showDate = ``;
     let showResult = ``;
-    let timeData = data.getHours();
+
+    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let day = weekday[dateCheckHourAndDay.getDay()];
 
     if (timeData >= 5 && timeData <= 11) {
 
@@ -45,16 +69,19 @@ function showDataDime() {
     }
 
     if (timeData >= 17 && timeData <= 19) {
+
         showResult = `<div class="styleModelDate">Good evening
         <b class="hightImage">✨</b></div>`;
     }
 
     if (timeData >= 20 || timeData <= 4) {
+
         showResult = `<div class="styleModelDate">Good night
         <b class="hightImage">🌕</b></div>`;
     }
 
-    let showDate = `${showResult}  <p class="showDate">${data.getDay() + 1} / ${data.getMonth() + 1} / ${data.getFullYear()}</p> `;
+
+    showDate = ` ${showResult} <p class="showDate"> ${day}<br/>${showDateDayMonthYear}</p> `;
     document.querySelector("#dayMonthYear").innerHTML = showDate;
 }
 
