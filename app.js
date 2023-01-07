@@ -1,12 +1,12 @@
 function init() {
 
-    popUpSayShabbatShalom();
-    menu();
+    PopUpSayShabbatShalom();
+    Menu();
 
-    showDataDime();
+    ShowDataDime();
     StyleCursor();
 
-    autoShopCarusel();
+    AutoShopCarusel();
 
     TapsPortfolio();
 
@@ -20,18 +20,18 @@ function init() {
     CountProjectsAppAndroid();
     CountProjectsAppArtuino();
 
-    changeLanguage();
+    ChangeLanguage();
 }
 
 init();
 
 
 
-function popUpSayShabbatShalom() {
+function PopUpSayShabbatShalom() {
 
     let day = new Date();
 
-    if (day.getDay() + 1 == 6 || day.getDay() + 1 == 7) {
+    if (day.getDay() + 1 == 6 || day.getDay() + 1 == 7 && day.getHours() < 18) {
 
         Swal.fire({
             title: '<img class="popUpShabbatShalom" src="https://i.postimg.cc/L59Hbp5m/image-processing20191022-9183-1x6u2a4.gif"></img>',
@@ -44,7 +44,8 @@ function popUpSayShabbatShalom() {
 
 
 
-function showDataDime() {
+
+function ShowDataDime() {
 
     const dateCheckHourAndDay = new Date();
     const showDateDayMonthYear = new Date().toLocaleDateString("de-DE");;
@@ -87,7 +88,7 @@ function showDataDime() {
 
 
 
-function autoShopCarusel() {
+function AutoShopCarusel() {
 
     let root = document.documentElement; //לקחת מ css
     let marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
@@ -384,7 +385,7 @@ function TapsPortfolio() {
 
 
 
-function menu() {
+function Menu() {
 
     let menu = document.querySelector('#menu-bars');
     let header = document.querySelector('header');
@@ -433,7 +434,7 @@ function StyleCursor() {
 
 
 
-function changeLanguage() {
+function ChangeLanguage() {
 
     //start page
     const langEl = document.querySelector('.langWrap');
@@ -607,9 +608,8 @@ function changeLanguage() {
 
 
 
-
 //send email
-function sendMail() {
+function SendMail() {
 
     let tempParams = {
 
