@@ -1,6 +1,6 @@
 # my portfolio WebSite - Html , Css , JavaScript
 
-Link website - https://artem-kot-portfolio.netlify.app
+Link website - https://portfolio-artem-kot.netlify.app
 
 # video :
 
