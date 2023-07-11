@@ -221,16 +221,6 @@ section {
     border-radius: 3px;
 }
 
-.CVhe {
-    background: url("/images/ii.jpg");
-    object-fit: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 0 500px;
-    color: rgba(255, 255, 255, 0.945);
-    border-radius: 3px;
-}
-
 
 .CVRecom img {
     object-fit: cover;
@@ -587,97 +577,6 @@ header .follow a:hover {
     font-weight: 600;
 }
 
-
-.experience .box-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.experience .box-container .box {
-    position: relative;
-    flex: 1 1 33rem;
-    border-left: .2rem solid var(--main-color);
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
-}
-
-
-.solderImg {
-    display: flex;
-    justify-content: space-between;
-}
-
-.solderImg img {
-    margin-top: -15%;
-}
-
-.dipImg {
-    display: flex;
-    justify-content: end;
-}
-
-.HighQImg {
-    display: flex;
-    justify-content: end;
-}
-
-
-.HighQImg img {
-    margin-top: 5%;
-}
-
-
-#zoomB,
-#zoomC {
-    transition: transform ease-in-out 0.3s;
-}
-
-#zoomB:hover,
-#zoomC:hover {
-    height: 390px;
-    transform: scale(1.3);
-}
-
-
-
-.experience .box-container .box::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -1rem;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-    background: var(--main-color);
-}
-
-.experience .box-container .box .content {
-    background: rgba(255, 255, 255, 0.436);
-    padding: 1.5rem;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-    border-radius: .5rem;
-}
-
-.experience .box-container .box .content span {
-    color: #fff;
-    font-size: 1.7rem;
-    background: var(--main-color);
-    border-radius: 50rem;
-    padding: .4rem 1rem;
-}
-
-.experience .box-container .box .content h3 {
-    font-size: 18px;
-    padding: .5rem 0;
-    color: rgba(33, 33, 33, 0.793);
-    font-weight: 600;
-}
-
-.experience .box-container .box .content p {
-    font-size: 13px;
-    color: rgba(102, 102, 102, 0.793);
-}
 
 .portfolio .box-container {
     display: flex;
@@ -1186,9 +1085,6 @@ header .follow a:hover {
 }
 
 .marquee {
-    /* width: var(--marquee-width);
-    height: var(--marquee-height);
-    background: whitesmoke; */
     color: #eee;
     overflow: hidden;
     position: relative;
