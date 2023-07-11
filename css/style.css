@@ -357,6 +357,13 @@ header .follow a:hover {
 
 .home .image img {
     transform: rotate(10deg);
+    animation: popup 0.9s;
+}
+
+@keyframes popup {
+    50% {
+        transform: scale(0.8);
+    }
 }
 
 .home .content {
